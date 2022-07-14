@@ -1,4 +1,3 @@
-
 # ClickOutside
 
 React click outside component.
@@ -6,13 +5,14 @@ React click outside component.
 ## Installation
 
 ```
-$ npm install tj/react-click-outside
+$ npm install @wayz/react-click-outside
 ```
 
 ## Example
 
-```js
-<ClickOutside onClickOutside={::this.close}>
+```jsx
+const onClickOutside = (e) => {}
+;<ClickOutside onClickOutside={onClickOutside}>
   <p>Im a menu or something that you want to hide when clicking outside.</p>
 </ClickOutside>
 ```
@@ -24,6 +24,3 @@ $ npm install tj/react-click-outside
 
 ---
 
-> [tjholowaychuk.com](http://tjholowaychuk.com) &nbsp;&middot;&nbsp;
-> GitHub [@tj](https://github.com/tj) &nbsp;&middot;&nbsp;
-> Twitter [@tjholowaychuk](https://twitter.com/tjholowaychuk)
