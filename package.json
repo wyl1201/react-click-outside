@@ -1,6 +1,6 @@
 {
-  "name": "react-click-outside",
-  "version": "1.1.1",
+  "name": "@wayz/react-click-outside",
+  "version": "0.0.1",
   "description": "ClickOutside component for React",
   "keywords": [
     "react",
@@ -8,16 +8,46 @@
     "outside",
     "component"
   ],
-  "main": "build/index.js",
-  "author": "TJ Holowaychuk <tj@tjholowaychuk.com>",
+  "main": "./lib/index.js",
+  "module": "./lib/index.esm.js",
+  "types": "./lib/types.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "yunl.wang@qq.com",
   "license": "MIT",
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm",
+    "build": "rimraf lib && rollup -c",
+    "publish": "npm run build && npm publish"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyl1201/react-click-outside"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.8.0",
+    "react": ">=16.8.0"
   },
   "devDependencies": {
-    "prop-types": "^15.5.8",
-    "react-fatigue-dev": "github:tj/react-fatigue-dev#704f778"
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/react": ">=16.8.0",
+    "react": ">=16.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.76.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
   }
 }
+
