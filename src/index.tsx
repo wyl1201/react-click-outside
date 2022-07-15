@@ -1,10 +1,17 @@
-import React, { FC, useEffect, useRef } from "react"
+import React, { CSSProperties, FC, useEffect, useRef } from "react"
 
 export interface IClickOutside {
   onClickOutside: (e: any) => void
+  className?: string
+  style?: CSSProperties
 }
 
-const ClickOutside: FC<IClickOutside> = ({ children, onClickOutside }) => {
+const ClickOutside: FC<IClickOutside> = ({
+  children,
+  onClickOutside,
+  className,
+  style,
+}) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const isTouchRef = useRef<boolean>(false)
 
@@ -24,7 +31,11 @@ const ClickOutside: FC<IClickOutside> = ({ children, onClickOutside }) => {
       document.removeEventListener("click", handle, true)
     }
   }, [])
-  return <div ref={wrapperRef}>{children}</div>
+  return (
+    <div ref={wrapperRef} className={className} style={style}>
+      {children}
+    </div>
+  )
 }
 
 export default ClickOutside
