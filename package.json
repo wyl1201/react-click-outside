@@ -1,6 +1,6 @@
 {
   "name": "@wayz/react-click-outside",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "ClickOutside component for React",
   "keywords": [
     "react",
