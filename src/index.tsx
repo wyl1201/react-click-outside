@@ -1,9 +1,7 @@
-import React, { CSSProperties, FC, useEffect, useRef } from "react"
+import React, { ComponentProps, FC, useEffect, useRef } from "react"
 
-export interface IClickOutside {
+export interface IClickOutside extends ComponentProps<"div"> {
   onClickOutside: (e: any) => void
-  className?: string
-  style?: CSSProperties
 }
 
 const ClickOutside: FC<IClickOutside> = ({
