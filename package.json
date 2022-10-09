@@ -22,7 +22,6 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx only-allow pnpm",
     "build": "rimraf lib && rollup -c",
     "publish": "npm run build && npm publish"
   },
