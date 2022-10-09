@@ -23,7 +23,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf lib && rollup -c",
-    "publish": "npm run build && npm publish"
+    "release": "npm run build && npm publish"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
